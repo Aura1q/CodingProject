@@ -7,7 +7,6 @@ function handleRegister(event) {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     const email = document.getElementById('email').value;
-    const token = document.getElementById('token').value;
 
     // Perform registration request
     fetch('/api/register', {
@@ -18,8 +17,7 @@ function handleRegister(event) {
         body: JSON.stringify({
             username,
             password,
-            email,
-            token
+            email
         })
     }).then(response => {
         if (response.ok) {
